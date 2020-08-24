@@ -56,8 +56,11 @@ namespace OnTime
 
         public void PopTrack()
         {
-            if (TryGetNext(out _)) _current = _tracks.First();
-            _tracks.RemoveFirst();
+            if (TryGetNext(out _))
+            {
+                _current = _tracks.First();
+                _tracks.RemoveFirst();
+            }
         }
     }
 }
